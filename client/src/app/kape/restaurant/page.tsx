@@ -1,57 +1,52 @@
-import styles from './restaurant.module.css';
+'use client';
 
-// Mock Menu Data
-const menuCategories = [
-  {
-    title: 'Breakfast',
-    items: [
-      { name: 'Full English Breakfast', price: 800, desc: 'Eggs, sausages, beans, toast, coffee' },
-      { name: 'Pancakes & Syrup', price: 600, desc: 'Fluffy pancakes with honey or maple syrup' },
-    ]
-  },
-  {
-    title: 'Main Courses',
-    items: [
-      { name: 'Grilled Tilapia', price: 1200, desc: 'Served with ugali and greens' },
-      { name: 'Chicken Kienyeji', price: 1500, desc: 'Traditional free-range chicken stew' },
-      { name: 'Pepper Steak', price: 1800, desc: 'Tender steak with peppercorn sauce and fries' },
-    ]
-  },
-  {
-    title: 'Beverages',
-    items: [
-      { name: 'Fresh Juice', price: 300, desc: 'Passion, Mango, or Orange' },
-      { name: 'House Coffee', price: 250, desc: 'Freshly brewed local coffee' },
-    ]
-  }
-];
+import Link from 'next/link';
+import styles from './restaurant.module.css';
 
 export default function RestaurantPage() {
   return (
-    <div className="container py-5">
+    <div className="container section-py">
       <header className={styles.header}>
-        <h1 className={styles.title}>Kape Dining</h1>
-        <p className={styles.subtitle}>Savor the taste of local and international delicacies.</p>
-        <button className="btn btn-kape mt-4">Order Online</button>
+        <h1 className={styles.title}>The Golden Pot Restaurant</h1>
+        <p className={styles.subtitle}>Fine dining with a touch of African heritage.</p>
       </header>
 
-      <div className={styles.menuContainer}>
-        {menuCategories.map((cat, index) => (
-          <div key={index} className={styles.category}>
-            <h2 className={styles.categoryTitle}>{cat.title}</h2>
-            <div className={styles.items}>
-              {cat.items.map((item, i) => (
-                <div key={i} className={styles.menuItem}>
-                  <div className={styles.itemInfo}>
-                    <h4>{item.name}</h4>
-                    <p>{item.desc}</p>
-                  </div>
-                  <div className={styles.itemPrice}>KES {item.price}</div>
-                </div>
-              ))}
+      <div className={styles.hero}>
+        <img src="/images/services/restaurant.png" alt="Restaurant Interior" className={styles.heroImg} />
+        <div className={styles.heroContent}>
+          <h2>Exquisite Ambience</h2>
+          <p>Experience world-class dining in our elegantly designed space, perfect for romantic dinners or business lunches.</p>
+          <Link href="/booking?type=table" className="btn btn-kape">Reserve a Table</Link>
+        </div>
+      </div>
+
+      <div className={styles.chefSection}>
+        <div className={styles.chefContent}>
+          <h2>Meet Our Head Chef</h2>
+          <p>Chef Michael brings over 20 years of culinary excellence, blending local flavors with international techniques to create unforgettable dishes.</p>
+          <ul className={styles.highlights}>
+            <li>Signature Dish: Grilled Tilapia with Ugali Remoulade</li>
+            <li>Farm-to-Table Philosophy</li>
+            <li>Award-winning Service</li>
+          </ul>
+        </div>
+        <img src="/images/services/chef.png" alt="Head Chef" className={styles.chefImg} />
+      </div>
+
+      <div className={styles.menuPreview}>
+        <h2>Menu Highlights</h2>
+        <div className={styles.grid}>
+          {['African Platter', 'Grilled Chicken', 'Vegetarian Delight', 'Fresh Juices'].map((item, i) => (
+            <div key={i} className={styles.card}>
+              <div className={styles.icon}>🍽️</div>
+              <h3>{item}</h3>
+              <p>Freshly prepared daily.</p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <div className="text-center mt-4">
+          <button className="btn btn-outline">View Full Menu</button>
+        </div>
       </div>
     </div>
   );
