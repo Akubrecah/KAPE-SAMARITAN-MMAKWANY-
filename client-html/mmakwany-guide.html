@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Guide - MMAKWANY</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Responsive Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="images/branding/mmakwany-logo.png" alt="MMAKWANY" style="height: 40px;">
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
+                ☰
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mmakwany-home.html">The Sanctuary</a></li>
+                <li><a href="#" style="color: var(--mmakwany-teal);">Local Guide</a></li>
+                <li><a href="login.html" class="btn btn-mmakwany" style="padding: 0.5rem 1rem;">Sign In</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header style="background: linear-gradient(rgba(10,35,66,0.5), rgba(10,35,66,0.5)), url('images/services/mmakwany-guide.png'); background-size: cover; background-position: center; padding: 6rem 0; color: white; text-align: center;">
+        <div class="container">
+            <h1 style="font-family: var(--font-heading); font-size: 3rem; margin-bottom: 1rem;">Local Experiences</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Discover the hidden gems surrounding The Sanctuary.</p>
+        </div>
+    </header>
+
+    <!-- Guide Content -->
+    <main class="container section-py">
+        <h2 class="menu-category-title">Curated Activities</h2>
+        <div class="menu-grid">
+             <!-- Activity 1 -->
+             <div class="menu-item">
+                <img src="https://placehold.co/600x400?text=Hiking" alt="Hiking" class="menu-img">
+                <div class="menu-details">
+                    <h3>Nature Trails</h3>
+                    <p class="menu-desc">Guided hikes through the lush hills surrounding the property. Perfect for morning exercise.</p>
+                </div>
+            </div>
+
+            <!-- Activity 2 -->
+            <div class="menu-item">
+                <img src="https://placehold.co/600x400?text=Safari" alt="Safari" class="menu-img">
+                <div class="menu-details">
+                    <h3>Sunset Safari</h3>
+                    <p class="menu-desc">A short drive to the local reserve for breathtaking views and wildlife spotting.</p>
+                </div>
+            </div>
+
+            <!-- Activity 3 -->
+            <div class="menu-item">
+                <img src="https://placehold.co/600x400?text=Culture" alt="Culture" class="menu-img">
+                <div class="menu-details">
+                    <h3>Cultural Village</h3>
+                    <p class="menu-desc">Immerse yourself in the local heritage with a visit to the nearby cultural center.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: var(--mmakwany-blue); color: white; padding: 2rem; text-align: center; margin-top: 4rem;">
+        <p>&copy; 2026 MMAKWANY. All rights reserved.</p>
+    </footer>
+
+    <!-- Navbar Script -->
+    <script src="js/navbar.js"></script>
+
+</body>
+</html>

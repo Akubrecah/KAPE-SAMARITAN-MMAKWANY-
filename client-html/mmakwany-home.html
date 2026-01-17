@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMAKWANY - The Sanctuary</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Responsive Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="images/branding/mmakwany-logo.png" alt="MMAKWANY" style="height: 40px;">
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
+                ☰
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" style="color: var(--mmakwany-teal);">The Sanctuary</a></li>
+                <li><a href="mmakwany-guide.html">Local Guide</a></li>
+                <li><a href="login.html" class="btn btn-mmakwany" style="padding: 0.5rem 1rem;">Sign In</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header style="background: linear-gradient(rgba(10,35,66,0.5), rgba(10,35,66,0.5)), url('images/rooms/mmakwany-villa.png'); background-size: cover; background-position: center; padding: 6rem 0; color: white; text-align: center;">
+        <div class="container">
+            <h1 style="font-family: var(--font-heading); font-size: 3rem; margin-bottom: 1rem;">The Sanctuary</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Escape to a world of serenity and exclusive luxury.</p>
+            <a href="login.html" class="btn btn-mmakwany" style="margin-top: 2rem; border: 1px solid white;">Request Booking</a>
+        </div>
+    </header>
+
+    <!-- Villa Details -->
+    <main class="container section-py">
+        
+        <div class="menu-grid" style="grid-template-columns: 1fr 1fr; align-items: center;">
+            <div style="padding-right: 2rem;">
+                <h2 class="menu-category-title" style="text-align: left; margin-top: 0;">Architectural Masterpiece</h2>
+                <p style="color: #666; margin-bottom: 1.5rem;">
+                    Nestled in nature, The Sanctuary offers a complete villa experience. 
+                    Featuring an open-plan design, floor-to-ceiling windows, and minimalist luxury interiors.
+                </p>
+                <ul style="list-style: none; color: #555;">
+                    <li style="margin-bottom: 0.5rem;">✓ 4 Bedrooms En-suite</li>
+                    <li style="margin-bottom: 0.5rem;">✓ Private Infinity Pool</li>
+                    <li style="margin-bottom: 0.5rem;">✓ Fully Equipped Chef's Kitchen</li>
+                    <li style="margin-bottom: 0.5rem;">✓ 24/7 Security & Concierge</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/rooms/mmakwany-interior.png" alt="Interior View" style="width: 100%; border-radius: var(--radius-md); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: var(--mmakwany-blue); color: white; padding: 2rem; text-align: center; margin-top: 4rem;">
+        <p>&copy; 2026 MMAKWANY. All rights reserved.</p>
+    </footer>
+
+    <!-- Navbar Script -->
+    <script src="js/navbar.js"></script>
+
+</body>
+</html>

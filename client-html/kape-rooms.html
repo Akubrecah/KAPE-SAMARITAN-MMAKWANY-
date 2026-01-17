@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms - Kape Samaritan</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Responsive Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="images/branding/kape-logo.png" alt="Kape Samaritan">
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
+                ☰
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="kape-restaurant.html">Restaurant</a></li>
+                <li><a href="#" style="color: var(--kape-gold);">Rooms</a></li>
+                <li><a href="kape-halls.html">Events</a></li>
+                <li><a href="login.html" class="btn btn-kape" style="padding: 0.5rem 1rem;">Sign In</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/rooms/suite.png'); background-size: cover; background-position: center; padding: 6rem 0; color: white; text-align: center;">
+        <div class="container">
+            <h1 style="font-family: var(--font-heading); font-size: 3rem; margin-bottom: 1rem;">Luxury Accommodation</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Comfort and elegance in every detail.</p>
+        </div>
+    </header>
+
+    <!-- Rooms List -->
+    <main class="container section-py">
+        
+        <h2 class="menu-category-title">Our Rooms</h2>
+        
+        <!-- Filter Controls (Visual Only for MVP) -->
+        <div class="text-center mb-4">
+            <button class="btn btn-sm btn-outline" style="margin: 0 0.5rem; background: var(--kape-gold); color: white; border: none;">All</button>
+            <button class="btn btn-sm btn-outline" style="margin: 0 0.5rem;">Single</button>
+            <button class="btn btn-sm btn-outline" style="margin: 0 0.5rem;">Double</button>
+            <button class="btn btn-sm btn-outline" style="margin: 0 0.5rem;">Suite</button>
+        </div>
+
+        <div class="menu-grid" id="rooms-grid">
+            <!-- Room Item: Single -->
+            <div class="menu-item">
+                <img src="images/rooms/single.png" alt="Single Room" class="menu-img">
+                <div class="menu-details">
+                    <div class="menu-header">
+                        <h3>Standard Single</h3>
+                        <span class="menu-price">KES 3,500</span>
+                    </div>
+                    <p class="menu-desc">Cozy room perfect for solo travelers. Includes breakfast, Wi-Fi, and hot shower.</p>
+                    <a href="login.html" class="btn btn-sm btn-kape w-full text-center">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Room Item: Double -->
+            <div class="menu-item">
+                <img src="images/rooms/double.png" alt="Double Room" class="menu-img">
+                <div class="menu-details">
+                    <div class="menu-header">
+                        <h3>Deluxe Double</h3>
+                        <span class="menu-price">KES 5,500</span>
+                    </div>
+                    <p class="menu-desc">Spacious room with a queen-size bed, work desk, and balcony view.</p>
+                    <a href="login.html" class="btn btn-sm btn-kape w-full text-center">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Room Item: Suite -->
+            <div class="menu-item">
+                <img src="images/rooms/suite.png" alt="Executive Suite" class="menu-img">
+                <div class="menu-details">
+                    <div class="menu-header">
+                        <h3>Executive Suite</h3>
+                        <span class="menu-price">KES 8,500</span>
+                    </div>
+                    <p class="menu-desc">Premium suite with separate living area, king-size bed, and luxury amenities.</p>
+                    <a href="login.html" class="btn btn-sm btn-kape w-full text-center">Book Now</a>
+                </div>
+            </div>
+             <!-- Room Item Mock 1 -->
+             <div class="menu-item">
+                <img src="images/rooms/double.png" alt="Twin Room" class="menu-img">
+                <div class="menu-details">
+                    <div class="menu-header">
+                        <h3>Twin Room</h3>
+                        <span class="menu-price">KES 6,000</span>
+                    </div>
+                    <p class="menu-desc">Ideal for friends or colleagues. Two single beds with ample space.</p>
+                    <a href="login.html" class="btn btn-sm btn-kape w-full text-center">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: var(--kape-dark); color: white; padding: 2rem; text-align: center; margin-top: 4rem;">
+        <p>&copy; 2026 Kape Samaritan. All rights reserved.</p>
+    </footer>
+
+    <!-- Navbar Script -->
+    <script src="js/navbar.js"></script>
+
+</body>
+</html>

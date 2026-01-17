@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Kape Samaritan</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="text-center mb-4">
+                <h1 style="font-family: var(--font-heading); color: var(--kape-dark);">Create Account</h1>
+                <p style="color: #666; font-size: 0.9rem;">Join us for a premium experience</p>
+            </div>
+
+            <div id="error-message" class="text-error text-center mb-4" style="display: none;"></div>
+
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required placeholder="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="name@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required placeholder="0712345678">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+
+                <button type="submit" class="btn btn-kape w-full" id="submit-btn" style="margin-top: 1rem;">Register</button>
+            </form>
+
+            <div class="text-center mt-4">
+                <p style="font-size: 0.9rem;">Already have an account? <a href="login.html" style="color: var(--kape-gold); font-weight: 600;">Sign In</a></p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;"><a href="index.html" style="color: #999;">Back to Home</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+
+</body>
+</html>

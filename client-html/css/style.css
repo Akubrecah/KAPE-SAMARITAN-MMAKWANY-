@@ -57,6 +57,177 @@ a {
   padding: 4rem 0;
 }
 
+/* Navbar Styles (Desktop & Mobile) */
+.navbar {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links a {
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--kape-gold);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--kape-dark);
+}
+
+/* Mobile Responsive Navbar */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Menu Grid */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.menu-item {
+    background: white;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-details {
+    padding: 1.5rem;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.menu-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.menu-price {
+    font-weight: 700;
+    color: var(--kape-gold);
+}
+
+.menu-desc {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    background: #f0f0f0;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: #555;
+    margin-right: 0.5rem;
+}
+
+.menu-category-title {
+    font-family: var(--font-heading);
+    color: var(--kape-dark);
+    margin: 3rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--kape-gold);
+    display: inline-block;
+}
+
+/* Menu Tabs */
+.menu-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.menu-tab {
+    background: none;
+    border: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    transition: all 0.2s;
+}
+
+.menu-tab.active, .menu-tab:hover {
+    background: var(--kape-gold);
+    color: white;
+    border-color: var(--kape-gold);
+}
+
+
 /* Button Base Styles */
 .btn {
   display: inline-block;
@@ -177,6 +348,30 @@ button:active {
   margin-bottom: 2rem;
   max-width: 400px;
   line-height: 1.8;
+}
+
+/* Mobile Responsiveness for Landing */
+@media (max-width: 768px) {
+    .landing-split {
+        flex-direction: column;
+    }
+    
+    .split-side {
+        height: 50vh;
+        flex: none;
+    }
+    
+    .split-side:hover {
+        flex: none;
+    }
+
+    .brand-title {
+        font-size: 2rem;
+    }
+    
+    .brand-desc {
+        font-size: 1rem;
+    }
 }
 
 /* Auth Card */

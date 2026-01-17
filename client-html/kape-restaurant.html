@@ -44,111 +44,172 @@
         <!-- Filter/Tip -->
         <div class="text-center mb-4">
             <p style="color: #666;">Serving Breakfast (7am-10am) • Lunch (12pm-3pm) • Dinner (6pm-10pm)</p>
+            <div class="menu-tabs">
+                <button class="menu-tab active" onclick="filterMenu('all')">All</button>
+                <button class="menu-tab" onclick="filterMenu('breakfast')">Breakfast</button>
+                <button class="menu-tab" onclick="filterMenu('starters')">Starters</button>
+                <button class="menu-tab" onclick="filterMenu('mains')">Mains</button>
+                <button class="menu-tab" onclick="filterMenu('dessert')">Dessert</button>
+                <button class="menu-tab" onclick="filterMenu('drinks')">Drinks</button>
+            </div>
+        </div>
+
+        <!-- Breakfast -->
+        <div class="menu-section" data-category="breakfast">
+            <h2 class="menu-category-title">Breakfast</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="https://placehold.co/600x400?text=Full+English" alt="Full English" class="menu-img">
+                    <div class="menu-details">
+                        <div class="menu-header">
+                            <h3>Full English Breakfast</h3>
+                            <span class="menu-price">KES 850</span>
+                        </div>
+                        <p class="menu-desc">Eggs (fried/scrambled), sausages, bacon, grilled tomato, baked beans, and toast.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://placehold.co/600x400?text=Pancakes" alt="Pancakes" class="menu-img">
+                    <div class="menu-details">
+                        <div class="menu-header">
+                            <h3>Fluffy Pancakes</h3>
+                            <span class="menu-price">KES 600</span>
+                        </div>
+                        <p class="menu-desc">Stack of 3 pancakes served with maple syrup and fresh berries.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Starters -->
-        <h2 class="menu-category-title">Starters</h2>
-        <div class="menu-grid">
-            <div class="menu-item">
-                <img src="images/starter-soup.jpg" alt="Soup" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Soup'">
-                <div class="menu-details">
-                    <div class="menu-header">
-                        <h3>Butternut Soup</h3>
-                        <span class="menu-price">KES 400</span>
+        <div class="menu-section" data-category="starters">
+            <h2 class="menu-category-title">Starters</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="images/starter-soup.jpg" alt="Soup" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Soup'">
+                    <div class="menu-details">
+                        <div class="menu-header">
+                            <h3>Butternut Soup</h3>
+                            <span class="menu-price">KES 400</span>
+                        </div>
+                        <p class="menu-desc">Creamy roasted butternut squash soup served with toasted pumpkin seeds.</p>
+                        <span class="badge">Vegetarian</span>
                     </div>
-                    <p class="menu-desc">Creamy roasted butternut squash soup served with toasted pumpkin seeds and crusty bread.</p>
-                    <span class="badge">Vegetarian</span>
                 </div>
-            </div>
-            
-            <div class="menu-item">
-                <img src="images/starter-wings.jpg" alt="Warnings" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Wings'">
-                <div class="menu-details">
-                    <div class="menu-header">
-                        <h3>Kape Spicy Wings</h3>
-                        <span class="menu-price">KES 550</span>
+                <div class="menu-item">
+                    <img src="images/starter-wings.jpg" alt="Wings" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Wings'">
+                    <div class="menu-details">
+                        <div class="menu-header">
+                            <h3>Kape Spicy Wings</h3>
+                            <span class="menu-price">KES 550</span>
+                        </div>
+                        <p class="menu-desc">Marinated chicken wings tossed in our signature honey-glaze chili sauce.</p>
+                        <span class="badge">Spicy</span>
                     </div>
-                    <p class="menu-desc">Marinated chicken wings tossed in our signature honey-glaze chili sauce.</p>
-                    <span class="badge">Spicy</span>
-                    <span class="badge">Popular</span>
-                </div>
-            </div>
-
-            <div class="menu-item">
-                <img src="images/starter-salad.jpg" alt="Salad" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Salad'">
-                <div class="menu-details">
-                    <div class="menu-header">
-                        <h3>Garden Fresh Salad</h3>
-                        <span class="menu-price">KES 350</span>
-                    </div>
-                    <p class="menu-desc">Crisp lettuce, cherry tomatoes, cucumber, olives, and feta cheese with balsamic vinaigrette.</p>
-                    <span class="badge">Healthy</span>
                 </div>
             </div>
         </div>
 
         <!-- Mains -->
-        <h2 class="menu-category-title">Main Courses</h2>
-        <div class="menu-grid">
-            <div class="menu-item">
-                <img src="images/main-steak.jpg" alt="Steak" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Steak'">
-                <div class="menu-details">
-                    <div class="menu-header">
-                        <h3>Grilled Ribeye Steak</h3>
-                        <span class="menu-price">KES 1,800</span>
+        <div class="menu-section" data-category="mains">
+            <h2 class="menu-category-title">Main Courses</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="images/main-steak.jpg" alt="Steak" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Steak'">
+                    <div class="menu-details">
+                        <div class="menu-header">
+                            <h3>Grilled Ribeye Steak</h3>
+                            <span class="menu-price">KES 1,800</span>
+                        </div>
+                        <p class="menu-desc">300g premium aged beef, grilled to perfection. Served with garlic mash.</p>
+                        <span class="badge">Chef's Choice</span>
                     </div>
-                    <p class="menu-desc">300g premium aged beef, grilled to perfection. Served with garlic mash and seasonal greens.</p>
-                    <span class="badge">Chef's Choice</span>
+                </div>
+                <div class="menu-item">
+                    <img src="images/main-fish.jpg" alt="Fish" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Tilapia'">
+                    <div class="menu-details">
+                        <div class="menu-header">
+                            <h3>Lake Tilapia</h3>
+                            <span class="menu-price">KES 1,200</span>
+                        </div>
+                        <p class="menu-desc">Whole fresh tilapia, deep-fried or wet-fry. Served with ugali.</p>
+                        <span class="badge">Local Favorite</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="images/main-pasta.jpg" alt="Pasta" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Pasta'">
+                    <div class="menu-details">
+                        <div class="menu-header">
+                            <h3>Chicken Alfredo</h3>
+                            <span class="menu-price">KES 1,100</span>
+                        </div>
+                        <p class="menu-desc">Fettuccine pasta tossed in a rich parmesan cream sauce.</p>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="menu-item">
-                <img src="images/main-fish.jpg" alt="Fish" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Tilapia'">
-                <div class="menu-details">
-                    <div class="menu-header">
-                        <h3>Lake Tilapia</h3>
-                        <span class="menu-price">KES 1,200</span>
+        <!-- Dessert -->
+        <div class="menu-section" data-category="dessert">
+            <h2 class="menu-category-title">Dessert</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="https://placehold.co/600x400?text=Cheesecake" alt="Cheesecake" class="menu-img">
+                    <div class="menu-details">
+                        <div class="menu-header">
+                            <h3>Passion Cheesecake</h3>
+                            <span class="menu-price">KES 450</span>
+                        </div>
+                        <p class="menu-desc">Classic New York cheesecake topped with fresh passion fruit coulis.</p>
                     </div>
-                    <p class="menu-desc">Whole fresh tilapia, deep-fried or wet-fry. Served with ugali and traditional greens.</p>
-                    <span class="badge">Local Favorite</span>
                 </div>
-            </div>
-
-            <div class="menu-item">
-                <img src="images/main-pasta.jpg" alt="Pasta" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Pasta'">
-                <div class="menu-details">
-                    <div class="menu-header">
-                        <h3>Chicken Alfredo</h3>
-                        <span class="menu-price">KES 1,100</span>
+                <div class="menu-item">
+                    <img src="https://placehold.co/600x400?text=Brownie" alt="Brownie" class="menu-img">
+                    <div class="menu-details">
+                        <div class="menu-header">
+                            <h3>Chocolate Brownie</h3>
+                            <span class="menu-price">KES 400</span>
+                        </div>
+                        <p class="menu-desc">Warm fudge brownie served with a scoop of vanilla ice cream.</p>
                     </div>
-                    <p class="menu-desc">Fettuccine pasta tossed in a rich parmesan cream sauce with grilled chicken breast.</p>
                 </div>
             </div>
         </div>
 
         <!-- Drinks -->
-        <h2 class="menu-category-title">Drinks & Beverages</h2>
-        <div class="menu-grid">
-             <div class="menu-item">
-                <img src="images/drink-juice.jpg" alt="Juice" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Juice'">
-                <div class="menu-details">
-                    <div class="menu-header">
-                        <h3>Fresh Tropical Juice</h3>
-                        <span class="menu-price">KES 250</span>
+        <div class="menu-section" data-category="drinks">
+            <h2 class="menu-category-title">Drinks & Beverages</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="images/drink-juice.jpg" alt="Juice" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Juice'">
+                    <div class="menu-details">
+                        <div class="menu-header">
+                            <h3>Fresh Tropical Juice</h3>
+                            <span class="menu-price">KES 250</span>
+                        </div>
+                        <p class="menu-desc">Blend of mango, passion, and pineapple.</p>
+                        <span class="badge">Fresh</span>
                     </div>
-                    <p class="menu-desc">Blend of mango, passion, and pineapple.</p>
-                    <span class="badge">Fresh</span>
                 </div>
-            </div>
-
-            <div class="menu-item">
-                <img src="images/drink-coffee.jpg" alt="Coffee" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Coffee'">
-                <div class="menu-details">
-                    <div class="menu-header">
-                        <h3>House Cappuccino</h3>
-                        <span class="menu-price">KES 300</span>
+                <div class="menu-item">
+                    <img src="images/drink-coffee.jpg" alt="Coffee" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Coffee'">
+                    <div class="menu-details">
+                        <div class="menu-header">
+                            <h3>House Cappuccino</h3>
+                            <span class="menu-price">KES 300</span>
+                        </div>
+                        <p class="menu-desc">Premium Kenyan bean espresso with steamed milk foam.</p>
                     </div>
-                    <p class="menu-desc">Premium Kenyan bean espresso with steamed milk foam.</p>
+                </div>
+                 <div class="menu-item">
+                    <img src="https://placehold.co/600x400?text=Cocktail" alt="Cocktail" class="menu-img">
+                    <div class="menu-details">
+                        <div class="menu-header">
+                            <h3>Dawa</h3>
+                            <span class="menu-price">KES 600</span>
+                        </div>
+                        <p class="menu-desc">Classic Kenyan cocktail with vodka, honey, lime, and ice.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -160,8 +221,25 @@
         <p>&copy; 2026 Kape Samaritan. All rights reserved.</p>
     </footer>
 
-    <!-- Navbar Script -->
+    <!-- Scripts -->
     <script src="js/navbar.js"></script>
+    <script>
+        function filterMenu(category) {
+            // Update active tab
+            document.querySelectorAll('.menu-tab').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Show/Hide sections
+            const sections = document.querySelectorAll('.menu-section');
+            sections.forEach(sec => {
+                if (category === 'all' || sec.dataset.category === category) {
+                    sec.style.display = 'block';
+                } else {
+                    sec.style.display = 'none';
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
