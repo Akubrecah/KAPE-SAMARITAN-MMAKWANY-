@@ -1,0 +1,54 @@
+.title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 4rem;
+  color: #666;
+}
+
+.options {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  padding: 3rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.kapeCard {
+  background-color: var(--kape-light);
+  border: 2px solid var(--kape-gold);
+  color: var(--kape-dark);
+}
+
+.mmakwanyCard {
+  background-color: var(--mmakwany-cream);
+  border: 2px solid var(--mmakwany-blue);
+  color: var(--mmakwany-blue);
+}
