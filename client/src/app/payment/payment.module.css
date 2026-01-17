@@ -1,0 +1,98 @@
+.card {
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 3rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 2rem;
+  color: var(--kape-dark);
+}
+
+.amountBox {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 2rem;
+}
+
+.amountBox span {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.amount {
+  font-size: 2rem;
+  color: var(--kape-dark);
+  font-weight: 700;
+}
+
+.method {
+  margin-bottom: 2rem;
+}
+
+.logo {
+  height: 50px; /* Reduced specific size, in reality would verify aspect ratio */
+  width: auto;
+  margin-bottom: 1rem;
+}
+
+.group {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.group input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: 1px solid #ddd;
+  border-radius: var(--radius-sm);
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid var(--success); /* Using var from upgraded CSS if available, else green */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.successIcon {
+  width: 80px;
+  height: 80px;
+  background: #28a745;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin: 0 auto 1.5rem;
+}
+
+.subtext {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 0.5rem;
+}
