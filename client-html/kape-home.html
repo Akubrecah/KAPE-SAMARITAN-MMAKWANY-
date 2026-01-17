@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kape Samaritan - Home</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Responsive Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="images/branding/kape-logo.png" alt="Kape Samaritan">
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
+                ☰
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="kape-restaurant.html">Restaurant</a></li>
+                <li><a href="kape-rooms.html">Rooms</a></li>
+                <li><a href="kape-halls.html">Events</a></li>
+                <li><a href="login.html" class="btn btn-kape" style="padding: 0.5rem 1rem;">Sign In</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/landing-kape.jpg'); background-size: cover; background-position: center; padding: 8rem 0; color: white; text-align: center;">
+        <div class="container">
+            <h1 style="font-family: var(--font-heading); font-size: 3.5rem; margin-bottom: 1rem;">Welcome to Kape Samaritan</h1>
+            <p style="font-size: 1.3rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">Experience hospitality redefined. Luxury rooms, exquisite dining, and world-class event spaces.</p>
+        </div>
+    </header>
+
+    <!-- Services Grid -->
+    <main class="container section-py">
+        <div class="text-center mb-4">
+            <h2 class="menu-category-title" style="margin-top: 0;">Our Services</h2>
+            <p style="color: #666;">Everything you need for a perfect stay.</p>
+        </div>
+
+        <div class="menu-grid">
+            <!-- Restaurant Card -->
+            <div class="menu-item">
+                <img src="images/services/restaurant.png" alt="Restaurant" class="menu-img">
+                <div class="menu-details">
+                    <div class="menu-header">
+                        <h3>Restaurant & Bar</h3>
+                    </div>
+                    <p class="menu-desc">Savor local and international delicacies prepared by our expert chefs.</p>
+                    <a href="kape-restaurant.html" class="btn btn-sm btn-kape w-full text-center">View Menu</a>
+                </div>
+            </div>
+
+            <!-- Rooms Card -->
+            <div class="menu-item">
+                <img src="images/rooms/suite.png" alt="Accommodation" class="menu-img">
+                <div class="menu-details">
+                    <div class="menu-header">
+                        <h3>Luxury Accommodation</h3>
+                    </div>
+                    <p class="menu-desc">Relax in our comfortable and stylish rooms designed for your peace of mind.</p>
+                    <a href="kape-rooms.html" class="btn btn-sm btn-kape w-full text-center">View Rooms</a>
+                </div>
+            </div>
+
+             <!-- Halls Card -->
+             <div class="menu-item">
+                <img src="https://placehold.co/600x400?text=Event+Halls" alt="Events" class="menu-img">
+                <div class="menu-details">
+                    <div class="menu-header">
+                        <h3>Conferences & Events</h3>
+                    </div>
+                    <p class="menu-desc">State-of-the-art facilities for weddings, conferences, and meetings.</p>
+                    <a href="kape-halls.html" class="btn btn-sm btn-kape w-full text-center">Book Hall</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: var(--kape-dark); color: white; padding: 2rem; text-align: center; margin-top: 4rem;">
+        <p>&copy; 2026 Kape Samaritan. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/navbar.js"></script>
+
+</body>
+</html>
