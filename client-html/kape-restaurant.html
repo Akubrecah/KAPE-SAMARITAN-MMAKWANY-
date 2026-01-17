@@ -8,24 +8,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Ionicons for Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
 
-    <!-- Responsive Navbar -->
+    <!-- TOP BAR (Utility) -->
+    <div class="top-bar">
+        <div class="container">
+            <a href="#">Modify or Cancel Booking</a>
+            <a href="#">Kape Loyalty</a>
+            <a href="#">Press Room</a>
+            <a href="#">Guest Reviews</a>
+            <a href="#">Careers</a>
+            <a href="#">Our Stories</a>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR (Navigation) -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-brand">
                 <img src="images/branding/kape-logo.png" alt="Kape Samaritan">
             </a>
+            
             <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
-                ☰
+                <ion-icon name="menu-outline"></ion-icon>
             </button>
+
             <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#" style="color: var(--kape-gold);">Restaurant</a></li>
-                <li><a href="kape-rooms.html">Rooms</a></li>
-                <li><a href="kape-halls.html">Events</a></li>
-                <li><a href="login.html" class="btn btn-kape" style="padding: 0.5rem 1rem;">Sign In</a></li>
+                <li><a href="kape-home.html">Overview</a></li>
+                <li><a href="kape-rooms.html">Rooms & Suites</a></li>
+                <li><a href="kape-restaurant.html" class="active">Restaurants & Bars</a></li>
+                <li><a href="#">Luxury Spa</a></li>
+                <li><a href="kape-halls.html">Meetings & Events</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="login.html" class="btn btn-kape" style="padding: 0.4rem 1rem; border-color: var(--kape-gold);">Sign In</a></li>
             </ul>
         </div>
     </nav>
@@ -216,9 +235,59 @@
 
     </main>
 
-    <!-- Footer -->
-    <footer style="background: var(--kape-dark); color: white; padding: 2rem; text-align: center; margin-top: 4rem;">
-        <p>&copy; 2026 Kape Samaritan. All rights reserved.</p>
+    <!-- RICH FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Branding & Contact -->
+                <div class="footer-col footer-contact">
+                    <img src="images/branding/kape-logo.png" alt="Kape Samaritan" style="height: 60px; margin-bottom: 1.5rem; filter: brightness(0) invert(1);">
+                    <p><ion-icon name="location-outline"></ion-icon> Villa Rosa Kape Samaritan<br>Chiromo Road, Nairobi, 00800, Kenya</p>
+                    <p><ion-icon name="call-outline"></ion-icon> <a href="tel:+254703049000">+254 703 049 000</a></p>
+                    <p><ion-icon name="mail-outline"></ion-icon> <a href="mailto:reservations.nairobi@kape.com">reservations.nairobi@kape.com</a></p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4>Overview</h4>
+                    <ul>
+                        <li><a href="kape-rooms.html">Rooms & Suites</a></li>
+                        <li><a href="kape-restaurant.html">Restaurants & Bars</a></li>
+                        <li><a href="#">Luxury Spa</a></li>
+                        <li><a href="kape-halls.html">Meetings & Events</a></li>
+                        <li><a href="#">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <!-- Info -->
+                <div class="footer-col">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">Modify Booking</a></li>
+                        <li><a href="#">Press Room</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Guest Reviews</a></li>
+                        <li><a href="#">Our Stories</a></li>
+                    </ul>
+                </div>
+
+                <!-- Check-in Info -->
+                <div class="footer-col">
+                    <h4>Check-in / Check-out</h4>
+                    <p style="color: #ccc; margin-bottom: 0.5rem;">Check-in from: <strong>14:00</strong></p>
+                    <p style="color: #ccc;">Check-out before: <strong>12:00</strong></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kape Hotels S.A.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Legal</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Imprint</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- Scripts -->
