@@ -1,0 +1,97 @@
+.wrapper {
+  background-color: var(--kape-light);
+}
+
+.hero {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--kape-dark); /* Fallback */
+  /* background-image: url('/images/kape-hero.jpg'); */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--kape-dark);
+  font-size: 2.5rem;
+}
+
+.services {
+  padding: 5rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+  border-top: 4px solid var(--kape-gold);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  color: var(--kape-dark);
+}
+
+.card p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.card a {
+  color: var(--kape-accent);
+  font-weight: 600;
+}

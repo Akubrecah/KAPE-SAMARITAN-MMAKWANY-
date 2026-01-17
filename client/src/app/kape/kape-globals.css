@@ -1,0 +1,18 @@
+/* Scoped Theme for Kape Section */
+.kape-theme {
+  --primary: var(--kape-gold);
+  --secondary: var(--kape-dark);
+  --background-alt: var(--kape-light);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.kape-footer {
+  background-color: var(--kape-dark);
+  color: #888;
+  padding: 2rem 0;
+  margin-top: auto;
+  text-align: center;
+  font-size: 0.9rem;
+}

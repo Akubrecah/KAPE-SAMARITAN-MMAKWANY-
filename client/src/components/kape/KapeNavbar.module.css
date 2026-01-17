@@ -1,0 +1,50 @@
+.navbar {
+  background-color: var(--kape-dark);
+  color: white;
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--kape-gold);
+}
+
+.navContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--kape-gold);
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navLinks a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navLinks a:hover {
+  color: var(--kape-gold);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .navContent {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .navLinks {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+}
