@@ -12,20 +12,31 @@
 <body>
 
     <!-- Responsive Navbar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-brand">
-                <img src="images/branding/mmakwany-logo.png" alt="MMAKWANY" style="height: 40px;">
+    <!-- Mmakwany Airbnb-style Navbar -->
+    <nav class="mmk-navbar">
+        <div class="mmk-nav-container">
+            <!-- Brand -->
+            <a href="index.html" class="mmk-brand">
+                <img src="images/branding/mmakwany-logo.png" alt="MMAKWANY" style="height: 32px; filter: brightness(0) invert(1) contrast(100%);"> 
             </a>
-            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
-                ☰
-            </button>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="mmakwany-home.html">The Sanctuary</a></li>
-                <li><a href="#" style="color: var(--mmakwany-teal);">Local Guide</a></li>
-                <li><a href="login.html" class="btn btn-mmakwany" style="padding: 0.5rem 1rem;">Sign In</a></li>
-            </ul>
+
+            <!-- Search Pill (Visual Only) -->
+            <div class="mmk-search-pill">
+                <div class="mmk-pill-section" style="padding-left: 8px;">Anywhere</div>
+                <div class="mmk-pill-section">Any week</div>
+                <div class="mmk-pill-section" style="border:none; color: var(--mmk-gray); font-weight:400;">Add guests</div>
+                <div class="mmk-search-btn">
+                    <ion-icon name="search"></ion-icon>
+                </div>
+            </div>
+
+            <!-- User Menu (Right) -->
+            <div class="mmk-user-nav">
+                <a href="index.html" class="mmk-nav-link">Home</a>
+                <a href="mmakwany-home.html" class="mmk-nav-link">The Sanctuary</a>
+                <a href="#" class="mmk-nav-link" style="color: var(--mmk-red);">Local Guide</a>
+                <a href="login.html" class="mmk-nav-link" style="background: var(--mmk-red); color: white; border-radius: 20px; padding: 8px 16px;">Sign In</a>
+            </div>
         </div>
     </nav>
 
