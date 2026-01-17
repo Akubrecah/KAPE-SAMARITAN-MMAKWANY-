@@ -1,0 +1,71 @@
+/* Importing styles from login module for consistency */
+/* In Next.js modules, we can't easily import another CSS module, so we will duplicate for now or assume shared usage */
+/* Actually, for better structure, I will copy the content since I cannot import css module in another css module easily without hacks */
+.container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--kape-light);
+  padding: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 3rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.title {
+  color: var(--kape-dark);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.form {
+  text-align: left;
+}
+
+.group {
+  margin-bottom: 1.5rem;
+}
+
+.group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+}
+
+.group input:focus {
+  outline: none;
+  border-color: var(--kape-gold);
+}
+
+.footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.footer a {
+  color: var(--kape-gold);
+  font-weight: 600;
+}
