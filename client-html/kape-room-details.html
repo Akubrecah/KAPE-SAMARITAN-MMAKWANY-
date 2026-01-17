@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superior Room - Kape Samaritan</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container">
+            <a href="#">Modify or Cancel Booking</a>
+            <a href="#">Kape Loyalty</a>
+            <a href="#">Press Room</a>
+            <a href="#">Guest Reviews</a>
+            <a href="#">Careers</a>
+            <a href="#">Our Stories</a>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="images/branding/kape-logo.png" alt="Kape Samaritan">
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="kape-home.html">Overview</a></li>
+                <li><a href="kape-rooms.html" class="active">Rooms & Suites</a></li>
+                <li><a href="kape-restaurant.html">Restaurants & Bars</a></li>
+                <li><a href="#">Luxury Spa</a></li>
+                <li><a href="kape-halls.html">Meetings & Events</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="login.html" class="btn btn-kape" style="padding: 0.4rem 1rem; border-color: rgba(255,255,255,0.6); color: white;">Sign In</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="room-detail-hero" style="background-image: url('images/rooms/single.png');">
+        <div class="hero-content">
+            <h1 class="hero-title-large">Superior Room</h1>
+            
+            <div class="hero-divider"></div>
+
+            <div class="hero-stats">
+                <div class="hero-stat-item">
+                    <ion-icon name="resize-outline"></ion-icon>
+                    <span>30 m² / 322 ft²</span>
+                </div>
+                <div class="hero-stat-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span>Up to 2 Guests</span>
+                </div>
+                <div class="hero-stat-item">
+                    <ion-icon name="bed-outline"></ion-icon>
+                    <span>1 King or 2 Twin</span>
+                </div>
+                <div class="hero-stat-item">
+                    <ion-icon name="image-outline"></ion-icon>
+                    <span>City View</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- DESCRIPTION SECTION -->
+    <section class="container details-section">
+        <div class="split-layout">
+            <div class="split-left">
+                <h2 class="section-label">Room Description</h2>
+            </div>
+            <div class="split-right">
+                <div class="rich-text">
+                    <p>Our spacious 30 m² (323 ft²) Superior Rooms offer luxury and comfort. Ideal for leisure and business travellers, our Superior Rooms feature large windows with panoramic views of the city, a plush, comfortable king bed, an executive working desk, a luxurious bathtub with a separate shower and a complimentary mini bar for your complete comfort and convenience during your stay with us.</p>
+                    <p>Experience the epitome of Nairobi hospitality with our attentive service and world-class amenities designed to make your stay unforgettable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMAGE BREAK -->
+    <div style="height: 60vh; background: url('images/rooms/double.png') center/cover fixed;"></div>
+
+    <!-- AMENITIES SECTION -->
+    <section class="container details-section">
+        <div class="split-layout">
+            <div class="split-left">
+                <h2 class="section-label">Amenities</h2>
+                <p style="margin-bottom: 2rem; color: #666; line-height: 1.6;">Our Superior Rooms offer every modern amenity for your convenience and comfort, whether you are visiting Nairobi for leisure or business.</p>
+            </div>
+            <div class="split-right">
+                <div class="amenities-container">
+                    <div class="amenity-row">
+                        <ion-icon name="cafe-outline"></ion-icon>
+                        <span>Coffee and/or tea making facilities</span>
+                    </div>
+                    <div class="amenity-row">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <span>In-room Safe</span>
+                    </div>
+                    <div class="amenity-row">
+                        <ion-icon name="laptop-outline"></ion-icon>
+                        <span>Executive Working Desk</span>
+                    </div>
+                    <div class="amenity-row">
+                        <ion-icon name="water-outline"></ion-icon>
+                        <span>Bathtub and separate shower</span>
+                    </div>
+                    <div class="amenity-row">
+                        <ion-icon name="wine-outline"></ion-icon>
+                        <span>Complimentary minibar (soft drinks)</span>
+                    </div>
+                    <div class="amenity-row">
+                        <ion-icon name="wifi-outline"></ion-icon>
+                        <span>High-speed Wi-Fi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY CAROUSEL -->
+    <section class="gallery-block">
+        <div class="gallery-scroller">
+            <div class="gallery-item">
+                <img src="images/rooms/suite.png" alt="Room View">
+            </div>
+            <div class="gallery-item">
+                <img src="images/rooms/single.png" alt="Bedroom">
+            </div>
+            <div class="gallery-item">
+                <img src="images/rooms/double.png" alt="Bathroom">
+            </div>
+        </div>
+    </section>
+
+    <!-- BACK TO ROOMS CTA -->
+    <div class="container footer-cta">
+        <a href="kape-rooms.html" class="btn-large-outline">
+            <ion-icon name="grid-outline"></ion-icon>
+            Back to Rooms & Suites
+        </a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Branding -->
+                <div class="footer-col">
+                    <img src="images/branding/kape-logo.png" alt="Kape Samaritan" style="height: 60px; filter: brightness(0) invert(1); margin-bottom: 1.5rem;">
+                    <p style="color: #ccc; line-height: 1.6;">
+                        Villa Rosa Kape Samaritan<br>
+                        Chiromo Road, Nairobi, 00800, Kenya<br>
+                        <a href="mailto:reservations.nairobi@kape.com" style="color: white;">reservations.nairobi@kape.com</a><br>
+                        <a href="tel:+254703049000" style="color: white;">+254 703 049 000</a>
+                    </p>
+                </div>
+
+                <!-- Links 1 -->
+                <div class="footer-col">
+                    <h4>Overview</h4>
+                    <ul>
+                        <li><a href="kape-rooms.html">Rooms & Suites</a></li>
+                        <li><a href="kape-restaurant.html">Restaurants & Bars</a></li>
+                        <li><a href="#">Luxury Spa</a></li>
+                        <li><a href="kape-halls.html">Meetings & Events</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 2 -->
+                <div class="footer-col">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Press Room</a></li>
+                        <li><a href="#">Best Rate Guarantee</a></li>
+                        <li><a href="#">Shop Kape</a></li>
+                    </ul>
+                </div>
+
+                 <!-- Newsletter -->
+                 <div class="footer-col">
+                    <h4>Sign Up</h4>
+                    <p style="color: #ccc; margin-bottom: 1rem;">Sign up for offers, news and travel inspiration.</p>
+                    <div style="border-bottom: 1px solid white; display: flex; align-items: center;">
+                        <input type="email" placeholder="email@example.com" style="background: transparent; border: none; outline: none; color: white; width: 100%; padding: 0.5rem 0;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kape Hotels S.A.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Legal</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Imprint</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/navbar.js"></script>
+
+</body>
+</html>

@@ -11,55 +11,138 @@
 </head>
 <body>
 
-    <!-- Responsive Navbar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-brand">
-                <img src="images/branding/mmakwany-logo.png" alt="MMAKWANY" style="height: 40px;">
+    <!-- Mmakwany Airbnb-style Navbar -->
+    <nav class="mmk-navbar">
+        <div class="mmk-nav-container">
+            <!-- Brand -->
+            <a href="index.html" class="mmk-brand">
+                <img src="images/branding/mmakwany-logo.png" alt="MMAKWANY" style="height: 32px; filter: brightness(0) invert(1) contrast(100%);"> 
             </a>
-            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
-                ☰
-            </button>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#" style="color: var(--mmakwany-teal);">The Sanctuary</a></li>
-                <li><a href="mmakwany-guide.html">Local Guide</a></li>
-                <li><a href="login.html" class="btn btn-mmakwany" style="padding: 0.5rem 1rem;">Sign In</a></li>
-            </ul>
+
+            <!-- Search Pill (Visual Only - Airbnb Aesthetic) -->
+            <div class="mmk-search-pill">
+                <div class="mmk-pill-section" style="padding-left: 8px;">Anywhere</div>
+                <div class="mmk-pill-section">Any week</div>
+                <div class="mmk-pill-section" style="border:none; color: var(--mmk-gray); font-weight:400;">Add guests</div>
+                <div class="mmk-search-btn">
+                    <ion-icon name="search"></ion-icon>
+                </div>
+            </div>
+
+            <!-- Restored Functional Links -->
+            <div class="mmk-user-nav">
+                <a href="index.html" class="mmk-nav-link">Home</a>
+                <a href="#" class="mmk-nav-link" style="color: var(--mmk-red);">The Sanctuary</a>
+                <a href="mmakwany-guide.html" class="mmk-nav-link">Local Guide</a>
+                <a href="login.html" class="mmk-nav-link" style="background: var(--mmk-red); color: white; border-radius: 20px; padding: 8px 16px;">Sign In</a>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header style="background: linear-gradient(rgba(10,35,66,0.5), rgba(10,35,66,0.5)), url('images/rooms/mmakwany-villa.png'); background-size: cover; background-position: center; padding: 6rem 0; color: white; text-align: center;">
+    <!-- Restored Hero Section (Functional 'Request Booking' + Airbnb aesthetics) -->
+    <header style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/rooms/mmakwany-villa.png'); background-size: cover; background-position: center; padding: 8rem 0; color: white; text-align: center; border-radius: 0 0 24px 24px; margin-bottom: 2rem;">
         <div class="container">
-            <h1 style="font-family: var(--font-heading); font-size: 3rem; margin-bottom: 1rem;">The Sanctuary</h1>
-            <p style="font-size: 1.2rem; opacity: 0.9;">Escape to a world of serenity and exclusive luxury.</p>
-            <a href="login.html" class="btn btn-mmakwany" style="margin-top: 2rem; border: 1px solid white;">Request Booking</a>
+            <h1 style="font-family: var(--font-heading); font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">The Sanctuary</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; font-weight: 500; text-shadow: 0 1px 2px rgba(0,0,0,0.3);">Escape to a world of serenity and exclusive luxury.</p>
+            <a href="login.html" class="btn btn-mmakwany" style="background: var(--mmk-red); color: white; border: none; padding: 12px 32px; border-radius: 8px; font-weight: 600; font-size: 1rem;">
+                Request Booking
+            </a>
         </div>
     </header>
 
-    <!-- Villa Details -->
-    <main class="container section-py">
+    <!-- Main Content: Restoring "Architectural Masterpiece" but with Airbnb-like Layout -->
+    <main class="mmk-grid-section">
         
-        <div class="menu-grid" style="grid-template-columns: 1fr 1fr; align-items: center;">
+        <!-- Description Section (Airbnb "About this place" style) -->
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; margin-bottom: 4rem;">
+            
             <div style="padding-right: 2rem;">
-                <h2 class="menu-category-title" style="text-align: left; margin-top: 0;">Architectural Masterpiece</h2>
-                <p style="color: #666; margin-bottom: 1.5rem;">
+                <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--mmk-text);">Architectural Masterpiece</h2>
+                <p style="color: var(--mmk-text); line-height: 1.6; margin-bottom: 1.5rem; font-size: 1.1rem;">
                     Nestled in nature, The Sanctuary offers a complete villa experience. 
                     Featuring an open-plan design, floor-to-ceiling windows, and minimalist luxury interiors.
                 </p>
-                <ul style="list-style: none; color: #555;">
-                    <li style="margin-bottom: 0.5rem;">✓ 4 Bedrooms En-suite</li>
-                    <li style="margin-bottom: 0.5rem;">✓ Private Infinity Pool</li>
-                    <li style="margin-bottom: 0.5rem;">✓ Fully Equipped Chef's Kitchen</li>
-                    <li style="margin-bottom: 0.5rem;">✓ 24/7 Security & Concierge</li>
-                </ul>
+                
+                <h3 style="font-size: 1.2rem; margin-bottom: 1rem; margin-top: 2rem;">What this place offers</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div style="display: flex; align-items: center; gap: 12px; color: var(--mmk-text);">
+                        <ion-icon name="bed-outline" style="font-size: 24px;"></ion-icon>
+                        <span>4 Bedrooms En-suite</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; color: var(--mmk-text);">
+                        <ion-icon name="water-outline" style="font-size: 24px;"></ion-icon>
+                        <span>Private Infinity Pool</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; color: var(--mmk-text);">
+                        <ion-icon name="restaurant-outline" style="font-size: 24px;"></ion-icon>
+                        <span>Chef's Kitchen</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; color: var(--mmk-text);">
+                        <ion-icon name="shield-checkmark-outline" style="font-size: 24px;"></ion-icon>
+                        <span>24/7 Security</span>
+                    </div>
+                </div>
             </div>
-            <div>
-                <img src="images/rooms/mmakwany-interior.png" alt="Interior View" style="width: 100%; border-radius: var(--radius-md); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+
+            <!-- Sidebar Card (Floating Booking Box style) -->
+            <div class="mmk-card" style="cursor: default;">
+                <img src="images/rooms/mmakwany-interior.png" alt="Interior View" style="width: 100%; border-radius: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.12); margin-bottom: 1rem;">
+                <div style="background: white; border: 1px solid #ddd; border-radius: 12px; padding: 24px; box-shadow: 0 6px 16px rgba(0,0,0,0.12);">
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;">
+                        <div><span style="font-size: 22px; font-weight: 600;">$450</span> <span style="font-size: 16px;">night</span></div>
+                        <div style="font-size: 14px;">★ 4.98</div>
+                    </div>
+                    <a href="login.html" style="display: block; width: 100%; background: var(--mmk-red); color: white; text-align: center; padding: 14px; border-radius: 8px; font-weight: 600; margin-top: 1rem;">
+                        Check Availability
+                    </a>
+                </div>
             </div>
+
         </div>
 
+        <!-- Listing Grid Title -->
+        <h2 style="font-size: 1.5rem; margin-bottom: 24px; color: var(--mmk-text);">Other Experiences</h2>
+
+        <!-- The Grid (Preserved for future listings or current sub-units) -->
+        <div class="mmk-listing-grid">
+            
+            <!-- Listing 1 -->
+            <article class="mmk-card">
+                <div class="mmk-card-img-wrap">
+                    <img src="images/rooms/mmakwany-interior.png" alt="Garden Suite" class="mmk-card-img">
+                    <ion-icon name="heart-outline" class="mmk-card-heart"></ion-icon>
+                </div>
+                <div class="mmk-card-content">
+                    <div class="mmk-card-header-row">
+                        <span>Garden Suite</span>
+                        <span>★ 4.85</span>
+                    </div>
+                    <div class="mmk-card-info">Private suite · 1 bed</div>
+                    <div class="mmk-card-price-row">
+                        <span class="mmk-price-bold">$120</span> night
+                    </div>
+                </div>
+            </article>
+
+             <!-- Listing 2 -->
+             <article class="mmk-card">
+                <div class="mmk-card-img-wrap">
+                    <img src="images/rooms/mmakwany-interior-living.png" alt="Luxury Living" class="mmk-card-img">
+                    <ion-icon name="heart-outline" class="mmk-card-heart"></ion-icon>
+                </div>
+                <div class="mmk-card-content">
+                    <div class="mmk-card-header-row">
+                        <span>Luxury Living Space</span>
+                        <span>★ 5.0</span>
+                    </div>
+                    <div class="mmk-card-info">Shared space · 2 guests</div>
+                    <div class="mmk-card-price-row">
+                        <span class="mmk-price-bold">$85</span> night
+                    </div>
+                </div>
+            </article>
+
+        </div>
     </main>
 
     <!-- Footer -->
