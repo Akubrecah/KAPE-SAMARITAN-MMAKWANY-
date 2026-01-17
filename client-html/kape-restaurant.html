@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu - Kape Samaritan</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Responsive Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="images/branding/kape-logo.png" alt="Kape Samaritan">
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
+                ☰
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" style="color: var(--kape-gold);">Restaurant</a></li>
+                <li><a href="kape-rooms.html">Rooms</a></li>
+                <li><a href="kape-halls.html">Events</a></li>
+                <li><a href="login.html" class="btn btn-kape" style="padding: 0.5rem 1rem;">Sign In</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/kape_restaurant_interior.png'); background-size: cover; background-position: center; padding: 6rem 0; color: white; text-align: center;">
+        <div class="container">
+            <h1 style="font-family: var(--font-heading); font-size: 3rem; margin-bottom: 1rem;">Culinary Excellence</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Exquisite flavors prepared by our world-class chefs.</p>
+        </div>
+    </header>
+
+    <!-- Menu Content -->
+    <main class="container section-py">
+        
+        <!-- Filter/Tip -->
+        <div class="text-center mb-4">
+            <p style="color: #666;">Serving Breakfast (7am-10am) • Lunch (12pm-3pm) • Dinner (6pm-10pm)</p>
+        </div>
+
+        <!-- Starters -->
+        <h2 class="menu-category-title">Starters</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="images/starter-soup.jpg" alt="Soup" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Soup'">
+                <div class="menu-details">
+                    <div class="menu-header">
+                        <h3>Butternut Soup</h3>
+                        <span class="menu-price">KES 400</span>
+                    </div>
+                    <p class="menu-desc">Creamy roasted butternut squash soup served with toasted pumpkin seeds and crusty bread.</p>
+                    <span class="badge">Vegetarian</span>
+                </div>
+            </div>
+            
+            <div class="menu-item">
+                <img src="images/starter-wings.jpg" alt="Warnings" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Wings'">
+                <div class="menu-details">
+                    <div class="menu-header">
+                        <h3>Kape Spicy Wings</h3>
+                        <span class="menu-price">KES 550</span>
+                    </div>
+                    <p class="menu-desc">Marinated chicken wings tossed in our signature honey-glaze chili sauce.</p>
+                    <span class="badge">Spicy</span>
+                    <span class="badge">Popular</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="images/starter-salad.jpg" alt="Salad" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Salad'">
+                <div class="menu-details">
+                    <div class="menu-header">
+                        <h3>Garden Fresh Salad</h3>
+                        <span class="menu-price">KES 350</span>
+                    </div>
+                    <p class="menu-desc">Crisp lettuce, cherry tomatoes, cucumber, olives, and feta cheese with balsamic vinaigrette.</p>
+                    <span class="badge">Healthy</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mains -->
+        <h2 class="menu-category-title">Main Courses</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="images/main-steak.jpg" alt="Steak" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Steak'">
+                <div class="menu-details">
+                    <div class="menu-header">
+                        <h3>Grilled Ribeye Steak</h3>
+                        <span class="menu-price">KES 1,800</span>
+                    </div>
+                    <p class="menu-desc">300g premium aged beef, grilled to perfection. Served with garlic mash and seasonal greens.</p>
+                    <span class="badge">Chef's Choice</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="images/main-fish.jpg" alt="Fish" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Tilapia'">
+                <div class="menu-details">
+                    <div class="menu-header">
+                        <h3>Lake Tilapia</h3>
+                        <span class="menu-price">KES 1,200</span>
+                    </div>
+                    <p class="menu-desc">Whole fresh tilapia, deep-fried or wet-fry. Served with ugali and traditional greens.</p>
+                    <span class="badge">Local Favorite</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="images/main-pasta.jpg" alt="Pasta" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Pasta'">
+                <div class="menu-details">
+                    <div class="menu-header">
+                        <h3>Chicken Alfredo</h3>
+                        <span class="menu-price">KES 1,100</span>
+                    </div>
+                    <p class="menu-desc">Fettuccine pasta tossed in a rich parmesan cream sauce with grilled chicken breast.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Drinks -->
+        <h2 class="menu-category-title">Drinks & Beverages</h2>
+        <div class="menu-grid">
+             <div class="menu-item">
+                <img src="images/drink-juice.jpg" alt="Juice" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Juice'">
+                <div class="menu-details">
+                    <div class="menu-header">
+                        <h3>Fresh Tropical Juice</h3>
+                        <span class="menu-price">KES 250</span>
+                    </div>
+                    <p class="menu-desc">Blend of mango, passion, and pineapple.</p>
+                    <span class="badge">Fresh</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="images/drink-coffee.jpg" alt="Coffee" class="menu-img" onerror="this.src='https://placehold.co/600x400?text=Coffee'">
+                <div class="menu-details">
+                    <div class="menu-header">
+                        <h3>House Cappuccino</h3>
+                        <span class="menu-price">KES 300</span>
+                    </div>
+                    <p class="menu-desc">Premium Kenyan bean espresso with steamed milk foam.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: var(--kape-dark); color: white; padding: 2rem; text-align: center; margin-top: 4rem;">
+        <p>&copy; 2026 Kape Samaritan. All rights reserved.</p>
+    </footer>
+
+    <!-- Navbar Script -->
+    <script src="js/navbar.js"></script>
+
+</body>
+</html>

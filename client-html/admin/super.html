@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Super Admin - Kape</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body style="padding: 2rem;">
+    <h1>Super Admin Portal</h1>
+    <p>Access Level: FULL CONTROL</p>
+    <button onclick="logout()" class="btn btn-kape">Logout</button>
+    <script>
+        function logout() {
+            localStorage.clear();
+            window.location.href = '../login.html';
+        }
+    </script>
+</body>
+</html>

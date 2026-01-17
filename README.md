@@ -100,6 +100,26 @@ npm run dev
 
 Visit `http://localhost:3000` to view the application.
 
+### 4. Seed Default Data (Users & Roles)
+Run this command in the `server` directory to create default Admin, Reception, Kitchen, and Housekeeping accounts:
+```bash
+npm run data:import
+```
+
+---
+
+## 🔑 Default Credentials
+
+Use these accounts to test the **Role-Based Redirection** and different dashboards:
+
+| Role | Email | Password | Dashboard |
+| :--- | :--- | :--- | :--- |
+| **Super Admin** | `admin@kape.com` | `123456` | `/admin/super` |
+| **Receptionist** | `reception@kape.com` | `123456` | `/admin/reception` |
+| **Kitchen/Chef** | `kitchen@kape.com` | `123456` | `/admin/kitchen` |
+| **Housekeeping** | `clean@kape.com` | `123456` | `/admin/housekeeping` |
+| **Guest** | `guest@gmail.com` | `123456` | `/dashboard` |
+
 ---
 
 ## 📦 Deployment

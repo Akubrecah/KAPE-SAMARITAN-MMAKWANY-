@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Kape Samaritan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .dashboard-header {
+            background: white;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="dashboard-header">
+        <h2 style="font-family: var(--font-heading);">KAPE DASHBOARD</h2>
+        <div>
+            <span id="user-name" style="margin-right: 1rem;">User</span>
+            <button onclick="logout()" class="btn btn-sm btn-outline">Logout</button>
+        </div>
+    </header>
+
+    <main class="container section-py">
+        <h1>My Bookings</h1>
+        <p>Welcome to your dashboard. Here you can view your upcoming stays.</p>
+        
+        <div style="background: white; padding: 2rem; border-radius: var(--radius-md); margin-top: 2rem; text-align: center; color: #666;">
+            No active bookings found.
+        </div>
+    </main>
+
+    <script>
+        // Simple Auth Check
+        const userStr = localStorage.getItem('user');
+        if (!userStr) {
+            window.location.href = 'login.html';
+        } else {
+            const user = JSON.parse(userStr);
+            document.getElementById('user-name').textContent = user.name;
+        }
+
+        function logout() {
+            localStorage.removeItem('user');
+            localStorage.removeItem('token');
+            window.location.href = 'login.html';
+        }
+    </script>
+
+</body>
+</html>
