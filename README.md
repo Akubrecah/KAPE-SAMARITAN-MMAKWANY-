@@ -89,7 +89,7 @@ npm install
 npm run dev
 ```
 
-### 3. Frontend Setup
+### 3. Frontend Setup (Next.js)
 Open a new terminal:
 ```bash
 cd client
@@ -99,6 +99,20 @@ npm run dev
 ```
 
 Visit `http://localhost:3000` to view the application.
+
+### 3b. Frontend Setup (Vanilla HTML/CSS/JS)
+**Recommended for current development phase.**
+If you are working on the Vanilla HTML version in `client-html`:
+
+**Option A (VS Code Live Server)**:
+- Right-click `index.html` or `mmakwany-home.html` in VS Code and select "Open with Live Server".
+
+**Option B (Python Simple Server)**:
+```bash
+cd client-html
+python3 -m http.server 8000
+```
+Visit `http://localhost:8000` in your browser.
 
 ### 4. Seed Default Data (Users & Roles)
 Run this command in the `server` directory to create default Admin, Reception, Kitchen, and Housekeeping accounts:

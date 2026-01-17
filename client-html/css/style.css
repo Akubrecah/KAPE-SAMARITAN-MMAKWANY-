@@ -42,6 +42,101 @@ a {
 .text-center { text-align: center; }
 .mb-4 { margin-bottom: 2rem; }
 
+/* LANDING PAGE - SPLIT SCREEN */
+.landing-split {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+    .landing-split {
+        flex-direction: row;
+    }
+}
+
+.split-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    min-height: 50vh;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.split-side::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1;
+}
+
+.split-side > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Kape Side - Deep Blue with Gold Accent */
+.kape-side {
+    background: linear-gradient(135deg, #02102a 0%, #0a2a4a 100%);
+}
+.kape-side::before {
+    background: url('../images/branding/kape-logo.png') center center no-repeat;
+    background-size: 40%;
+    opacity: 0.05;
+}
+
+/* Mmakwany Side - Teal/Serene */
+.mmakwany-side {
+    background: linear-gradient(135deg, #1a3a3a 0%, #0d2626 100%);
+}
+.mmakwany-side::before {
+    background: url('../images/branding/mmakwany-logo.png') center center no-repeat;
+    background-size: 40%;
+    opacity: 0.05;
+}
+
+.brand-logo {
+    height: 60px;
+    margin-bottom: 1.5rem;
+    filter: brightness(0) invert(1);
+}
+
+.brand-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+}
+
+.brand-desc {
+    max-width: 350px;
+    opacity: 0.85;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.btn-mmakwany {
+    background: #2a9d8f; /* Teal */
+    color: white;
+    border-color: #2a9d8f;
+}
+.btn-mmakwany:hover {
+    background: #21867a;
+    border-color: #21867a;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid currentColor;
+}
+
 .btn {
     display: inline-block;
     padding: 0.8rem 1.5rem;
