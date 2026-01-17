@@ -10,10 +10,11 @@ export default function KapeNavbar() {
             <img src="/images/branding/kape-logo.png" alt="KAPE SAMARITAN" style={{ height: '40px' }} />
           </Link>
           <ul className={styles.navLinks}>
+            <li><Link href="/">Home</Link></li>
             <li><Link href="/kape/rooms">Rooms</Link></li>
             <li><Link href="/kape/halls">Halls</Link></li>
             <li><Link href="/kape/restaurant">Restaurant</Link></li>
-            <li><Link href="/api/auth/login" className="btn btn-kape">Sign In</Link></li>
+            <li><Link href="/login" className="btn btn-kape">Sign In</Link></li>
           </ul>
         </div>
       </div>

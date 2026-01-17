@@ -2,9 +2,13 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import styles from './auth.module.css';
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+
 export default function RegisterPage() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,12 +16,49 @@ export default function RegisterPage() {
     password: '',
     confirmPassword: ''
   });
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Register attempt', formData);
-    // TODO: Connect to backend
-    window.location.href = '/dashboard';
+    setError('');
+
+    if (formData.password !== formData.confirmPassword) {
+      setError('Passwords do not match');
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const res = await fetch(`${API_URL}/api/users/register`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          password: formData.password,
+          // role defaults to GUEST on backend
+        }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        localStorage.setItem('user', JSON.stringify(data));
+        localStorage.setItem('token', data.token);
+        router.push('/dashboard');
+      } else {
+        setError(data.message || 'Registration failed');
+      }
+    } catch (err) {
+      setError('Network error. Is the server running?');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,6 +71,8 @@ export default function RegisterPage() {
         <h1 className={styles.title}>Create Account</h1>
         <p className={styles.subtitle}>Join us for a premium experience</p>
         
+        {error && <div style={{ color: 'red', textAlign: 'center', marginBottom: '1rem' }}>{error}</div>}
+
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.group}>
             <label>Full Name</label>
@@ -56,7 +99,9 @@ export default function RegisterPage() {
             <input type="password" name="confirmPassword" required onChange={handleChange} />
           </div>
 
-          <button type="submit" className="btn btn-kape w-full">Register</button>
+          <button type="submit" className="btn btn-kape w-full" disabled={loading}>
+            {loading ? 'Registering...' : 'Register'}
+          </button>
         </form>
 
         <p className={styles.footer}>
