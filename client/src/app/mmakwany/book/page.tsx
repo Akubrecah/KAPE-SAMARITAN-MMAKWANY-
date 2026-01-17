@@ -8,6 +8,11 @@ export default function BookSanctuaryPage() {
           <h1 style={{ fontSize: '3rem', marginBottom: '2rem', fontFamily: 'var(--font-heading)' }}>The Sanctuary</h1>
           
           <div style={{ marginBottom: '2rem' }}>
+             <img 
+               src="/images/rooms/mmakwany-interior.png" 
+               alt="Villa Interior" 
+               style={{ width: '100%', borderRadius: '8px', marginBottom: '1.5rem', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }} 
+             />
             <h3 style={{ color: 'var(--mmakwany-teal)' }}>About the Space</h3>
             <p style={{ lineHeight: 1.6, color: '#555' }}>
               A stunning 4-bedroom modern villa located in a secluded, secure compound. 

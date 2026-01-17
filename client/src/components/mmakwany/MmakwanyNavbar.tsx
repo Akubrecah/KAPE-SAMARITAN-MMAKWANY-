@@ -7,7 +7,7 @@ export default function MmakwanyNavbar() {
       <div className="container">
         <div className={styles.navContent}>
           <Link href="/mmakwany" className={styles.logo}>
-            MMAKWANY
+            <img src="/images/branding/mmakwany-logo.png" alt="MMAKWANY" style={{ height: '40px' }} />
           </Link>
           <ul className={styles.navLinks}>
             <li><Link href="/mmakwany/book">The Sanctuary</Link></li>

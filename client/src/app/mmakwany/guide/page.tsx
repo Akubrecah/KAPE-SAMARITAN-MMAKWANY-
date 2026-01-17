@@ -10,9 +10,15 @@ export default function GuidePage() {
       <h1 style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>
         Explore the Area
       </h1>
-      <p style={{ textAlign: 'center', marginBottom: '4rem', color: '#666' }}>
+      <p style={{ textAlign: 'center', marginBottom: '3rem', color: '#666' }}>
         Curated recommendations for our guests to enjoy the best of the locality.
       </p>
+
+      <img 
+        src="/images/services/mmakwany-guide.png" 
+        alt="Scenic View" 
+        style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '12px', marginBottom: '3rem' }} 
+      />
 
       <div style={{ display: 'grid', gap: '2rem' }}>
         {attractions.map((attr, idx) => (

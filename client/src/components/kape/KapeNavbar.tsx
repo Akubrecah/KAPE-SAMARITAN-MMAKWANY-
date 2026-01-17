@@ -7,7 +7,7 @@ export default function KapeNavbar() {
       <div className="container">
         <div className={styles.navContent}>
           <Link href="/kape" className={styles.logo}>
-            KAPE SAMARITAN
+            <img src="/images/branding/kape-logo.png" alt="KAPE SAMARITAN" style={{ height: '40px' }} />
           </Link>
           <ul className={styles.navLinks}>
             <li><Link href="/kape/rooms">Rooms</Link></li>

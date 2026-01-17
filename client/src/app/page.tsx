@@ -8,6 +8,9 @@ export default function Home() {
         {/* Kape Samaritan Side */}
         <section className={`${styles.split} ${styles.left}`}>
           <div className={styles.content}>
+            <div style={{ marginBottom: '1.5rem' }}>
+               <img src="/images/branding/kape-logo.png" alt="Kape Logo" width={100} height={100} style={{ margin: '0 auto', filter: 'brightness(0) invert(1)' }} />
+            </div>
             <h2 className={styles.brandTitle}>KAPE SAMARITAN</h2>
             <p className={styles.tagline}>Example of Hospitality & Dining</p>
             <p className={styles.description}>
@@ -24,6 +27,9 @@ export default function Home() {
         {/* MMAKWANY Side */}
         <section className={`${styles.split} ${styles.right}`}>
           <div className={styles.content}>
+             <div style={{ marginBottom: '1.5rem' }}>
+               <img src="/images/branding/mmakwany-logo.png" alt="MMAKWANY Logo" width={100} height={100} style={{ margin: '0 auto', filter: 'brightness(0) invert(1)' }} />
+            </div>
             <h2 className={styles.brandTitle}>MMAKWANY</h2>
             <p className={styles.tagline}>Your Private Sanctuary</p>
             <p className={styles.description}>
