@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rooms - Kape Samaritan</title>
+    <title>Luxury Rooms & Suites - Kape Samaritan</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Ionicons for Icons -->
+    <!-- Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
 
-    <!-- TOP BAR (Utility) -->
+    <!-- TOP BAR -->
     <div class="top-bar">
         <div class="container">
             <a href="#">Modify or Cancel Booking</a>
@@ -26,14 +26,14 @@
         </div>
     </div>
 
-    <!-- MAIN NAVBAR (Navigation) -->
+    <!-- MAIN NAVBAR -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-brand">
                 <img src="images/branding/kape-logo.png" alt="Kape Samaritan">
             </a>
             
-            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
                 <ion-icon name="menu-outline"></ion-icon>
             </button>
 
@@ -49,95 +49,116 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/rooms/suite.png'); background-size: cover; background-position: center; padding: 6rem 0; color: white; text-align: center;">
-        <div class="container">
-            <h1 style="font-family: var(--font-heading); font-size: 3rem; margin-bottom: 1rem;">Luxury Accommodation</h1>
-            <p style="font-size: 1.2rem; opacity: 0.9;">Comfort and elegance in every detail.</p>
+    <!-- HERO SECTION -->
+    <!-- Matches Kempinski gradient header style -->
+    <header style="background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%), url('images/rooms/suite.png'); background-size: cover; background-position: center; min-height: 60vh; display: flex; align-items: center; justify-content: center; position: relative;">
+        <div class="container text-center text-white" style="z-index: 2;">
+            <h1 style="font-size: 4rem; margin-bottom: 1rem; font-weight: 300; letter-spacing: -1px;">Rooms & Suites</h1>
+            <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">Our 200 guest rooms and suites offer all the amenities and comfort you expect from a luxury hotel in the heart of Nairobi.</p>
         </div>
+        <!-- Simple overlay for readability -->
+        <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.3);"></div>
     </header>
 
-    <!-- Rooms List -->
+    <!-- SUB-NAV / FILTERS -->
+    <div class="sub-nav-container">
+        <div class="container">
+            <div class="sub-nav">
+                <button class="sub-nav-item active" onclick="filterRooms('all')">Rooms</button>
+                <button class="sub-nav-item" onclick="filterRooms('suites')">Suites</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
     <main class="container section-py">
         
-        <h2 class="menu-category-title">Our Rooms</h2>
-        
-        <!-- Filter Controls (Visual Only for MVP) -->
-        <div class="text-center mb-4">
-            <button class="btn btn-sm btn-outline" style="margin: 0 0.5rem; background: var(--kape-gold); color: white; border: none;">All</button>
-            <button class="btn btn-sm btn-outline" style="margin: 0 0.5rem;">Single</button>
-            <button class="btn btn-sm btn-outline" style="margin: 0 0.5rem;">Double</button>
-            <button class="btn btn-sm btn-outline" style="margin: 0 0.5rem;">Suite</button>
+        <!-- Room 1: Superior Room -->
+        <div class="room-card" data-category="rooms">
+            <div class="room-card-image">
+                <img src="images/rooms/single.png" alt="Superior Room">
+            </div>
+            <div class="room-card-details">
+                <h2 class="room-title">Superior Room</h2>
+                <div class="room-specs">
+                    <div class="spec-item"><ion-icon name="resize-outline"></ion-icon> 30 m² / 322 ft²</div>
+                    <div class="spec-item"><ion-icon name="people-outline"></ion-icon> Up to 2 Guests</div>
+                    <div class="spec-item"><ion-icon name="business-outline"></ion-icon> City view</div>
+                </div>
+                <p class="room-desc">Our stylish Superior Rooms offer complete luxury and comfort with large windows sharing panoramic views of the city. Comforts of a plush king bed and all amenities are included.</p>
+                <a href="login.html" class="btn btn-kape">MORE DETAILS</a>
+            </div>
         </div>
 
-        <div class="menu-grid" id="rooms-grid">
-            <!-- Room Item: Single -->
-            <div class="menu-item">
-                <img src="images/rooms/single.png" alt="Single Room" class="menu-img">
-                <div class="menu-details">
-                    <div class="menu-header">
-                        <h3>Standard Single</h3>
-                        <span class="menu-price">KES 3,500</span>
-                    </div>
-                    <p class="menu-desc">Cozy room perfect for solo travelers. Includes breakfast, Wi-Fi, and hot shower.</p>
-                    <a href="login.html" class="btn btn-sm btn-kape w-full text-center">Book Now</a>
-                </div>
+        <!-- Room 2: Deluxe Room (Reverse Layout) -->
+        <div class="room-card reverse" data-category="rooms">
+            <div class="room-card-image">
+                <img src="images/rooms/double.png" alt="Deluxe Room">
             </div>
+            <div class="room-card-details">
+                <h2 class="room-title">Deluxe Room</h2>
+                <div class="room-specs">
+                    <div class="spec-item"><ion-icon name="resize-outline"></ion-icon> 34 m² / 365 ft²</div>
+                    <div class="spec-item"><ion-icon name="people-outline"></ion-icon> Up to 2 Guests</div>
+                    <div class="spec-item"><ion-icon name="business-outline"></ion-icon> City view</div>
+                </div>
+                <p class="room-desc">Our stylish Deluxe Rooms offer extra space and comfort. Generously-sized rooms offer the finest amenities, elegant furnishings and large windows overlooking the city.</p>
+                <a href="login.html" class="btn btn-kape">MORE DETAILS</a>
+            </div>
+        </div>
 
-            <!-- Room Item: Double -->
-            <div class="menu-item">
-                <img src="images/rooms/double.png" alt="Double Room" class="menu-img">
-                <div class="menu-details">
-                    <div class="menu-header">
-                        <h3>Deluxe Double</h3>
-                        <span class="menu-price">KES 5,500</span>
-                    </div>
-                    <p class="menu-desc">Spacious room with a queen-size bed, work desk, and balcony view.</p>
-                    <a href="login.html" class="btn btn-sm btn-kape w-full text-center">Book Now</a>
-                </div>
+        <!-- Room 3: Balcony Deluxe -->
+        <div class="room-card" data-category="rooms">
+            <div class="room-card-image">
+                <img src="images/rooms/suite.png" alt="Balcony Deluxe">
             </div>
+            <div class="room-card-details">
+                <h2 class="room-title">Balcony Deluxe</h2>
+                <div class="room-specs">
+                    <div class="spec-item"><ion-icon name="resize-outline"></ion-icon> 34 m² / 365 ft²</div>
+                    <div class="spec-item"><ion-icon name="people-outline"></ion-icon> Up to 2 Guests</div>
+                    <div class="spec-item"><ion-icon name="sunny-outline"></ion-icon> City view & Balcony</div>
+                </div>
+                <p class="room-desc">Enjoy beautiful views overlooking Nairobi from our stylish and spacious Balcony Deluxe Room. The ideal base for your visit, these rooms offer every amenity for your comfort.</p>
+                <a href="login.html" class="btn btn-kape">MORE DETAILS</a>
+            </div>
+        </div>
 
-            <!-- Room Item: Suite -->
-            <div class="menu-item">
-                <img src="images/rooms/suite.png" alt="Executive Suite" class="menu-img">
-                <div class="menu-details">
-                    <div class="menu-header">
-                        <h3>Executive Suite</h3>
-                        <span class="menu-price">KES 8,500</span>
-                    </div>
-                    <p class="menu-desc">Premium suite with separate living area, king-size bed, and luxury amenities.</p>
-                    <a href="login.html" class="btn btn-sm btn-kape w-full text-center">Book Now</a>
-                </div>
+         <!-- Room 4: Executive Suite (Suites Category) -->
+         <div class="room-card reverse" data-category="suites">
+            <div class="room-card-image">
+                <img src="images/rooms/suite.png" alt="Executive Suite">
             </div>
-             <!-- Room Item Mock 1 -->
-             <div class="menu-item">
-                <img src="images/rooms/double.png" alt="Twin Room" class="menu-img">
-                <div class="menu-details">
-                    <div class="menu-header">
-                        <h3>Twin Room</h3>
-                        <span class="menu-price">KES 6,000</span>
-                    </div>
-                    <p class="menu-desc">Ideal for friends or colleagues. Two single beds with ample space.</p>
-                    <a href="login.html" class="btn btn-sm btn-kape w-full text-center">Book Now</a>
+            <div class="room-card-details">
+                <h2 class="room-title">Executive Suite</h2>
+                <div class="room-specs">
+                    <div class="spec-item"><ion-icon name="resize-outline"></ion-icon> 64 m² / 700 ft²</div>
+                    <div class="spec-item"><ion-icon name="people-outline"></ion-icon> Up to 3 Guests</div>
+                    <div class="spec-item"><ion-icon name="star-outline"></ion-icon> Executive Lounge Access</div>
                 </div>
+                <p class="room-desc">Our spacious Executive Suite offers separate living and bedroom areas, large windows, a plush king bed, and a luxurious bathroom. Enjoy executive benefits including complimentary breakfast.</p>
+                <a href="login.html" class="btn btn-kape">MORE DETAILS</a>
             </div>
         </div>
 
     </main>
 
-    <!-- RICH FOOTER -->
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
-                <!-- Branding & Contact -->
-                <div class="footer-col footer-contact">
-                    <img src="images/branding/kape-logo.png" alt="Kape Samaritan" style="height: 60px; margin-bottom: 1.5rem; filter: brightness(0) invert(1);">
-                    <p><ion-icon name="location-outline"></ion-icon> Villa Rosa Kape Samaritan<br>Chiromo Road, Nairobi, 00800, Kenya</p>
-                    <p><ion-icon name="call-outline"></ion-icon> <a href="tel:+254703049000">+254 703 049 000</a></p>
-                    <p><ion-icon name="mail-outline"></ion-icon> <a href="mailto:reservations.nairobi@kape.com">reservations.nairobi@kape.com</a></p>
+                <!-- Branding -->
+                <div class="footer-col">
+                    <img src="images/branding/kape-logo.png" alt="Kape Samaritan" style="height: 60px; filter: brightness(0) invert(1); margin-bottom: 1.5rem;">
+                    <p style="color: #ccc; line-height: 1.6;">
+                        Villa Rosa Kape Samaritan<br>
+                        Chiromo Road, Nairobi, 00800, Kenya<br>
+                        <a href="mailto:reservations.nairobi@kape.com" style="color: white;">reservations.nairobi@kape.com</a><br>
+                        <a href="tel:+254703049000" style="color: white;">+254 703 049 000</a>
+                    </p>
                 </div>
 
-                <!-- Quick Links -->
+                <!-- Links 1 -->
                 <div class="footer-col">
                     <h4>Overview</h4>
                     <ul>
@@ -145,27 +166,27 @@
                         <li><a href="kape-restaurant.html">Restaurants & Bars</a></li>
                         <li><a href="#">Luxury Spa</a></li>
                         <li><a href="kape-halls.html">Meetings & Events</a></li>
-                        <li><a href="#">Gallery</a></li>
                     </ul>
                 </div>
 
-                <!-- Info -->
+                <!-- Links 2 -->
                 <div class="footer-col">
                     <h4>Information</h4>
                     <ul>
-                        <li><a href="#">Modify Booking</a></li>
+                        <li><a href="#">Contact Us</a></li>
                         <li><a href="#">Press Room</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Guest Reviews</a></li>
-                        <li><a href="#">Our Stories</a></li>
+                        <li><a href="#">Best Rate Guarantee</a></li>
+                        <li><a href="#">Shop Kape</a></li>
                     </ul>
                 </div>
 
-                <!-- Check-in Info -->
-                <div class="footer-col">
-                    <h4>Check-in / Check-out</h4>
-                    <p style="color: #ccc; margin-bottom: 0.5rem;">Check-in from: <strong>14:00</strong></p>
-                    <p style="color: #ccc;">Check-out before: <strong>12:00</strong></p>
+                 <!-- Newsletter -->
+                 <div class="footer-col">
+                    <h4>Sign Up</h4>
+                    <p style="color: #ccc; margin-bottom: 1rem;">Sign up for offers, news and travel inspiration.</p>
+                    <div style="border-bottom: 1px solid white; display: flex; align-items: center;">
+                        <input type="email" placeholder="email@example.com" style="background: transparent; border: none; outline: none; color: white; width: 100%; padding: 0.5rem 0;">
+                    </div>
                 </div>
             </div>
 
@@ -175,13 +196,47 @@
                     <a href="#">Legal</a>
                     <a href="#">Privacy Policy</a>
                     <a href="#">Imprint</a>
+                    <a href="#">Sitemap</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Navbar Script -->
     <script src="js/navbar.js"></script>
+    <script>
+        function filterRooms(category) {
+            // Update Tab Active State
+            const btns = document.querySelectorAll('.sub-nav-item');
+            btns.forEach(btn => btn.classList.remove('active'));
+            // Find the clicked button target logic usually simpler with event listeners but this works for MVP
+            const clickedBtn = Array.from(btns).find(b => b.textContent.toLowerCase().includes(category === 'all' ? 'rooms' : category));
+            if(clickedBtn) clickedBtn.classList.add('active');
+
+            // Filter Logic
+            const cards = document.querySelectorAll('.room-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Special case: if category is 'all' (Rooms clicked), show 'rooms', hide 'suites' maybe? 
+            // The user prompt implies typical filtering. Let's assume 'Rooms' shows all or just rooms. 
+            // Usually 'Rooms' shows standard rooms, 'Suites' shows suites.
+            if (category === 'all') {
+                // Let's make "Rooms" tab show only rooms category
+                 cards.forEach(card => {
+                    if (card.dataset.category === 'rooms') {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+        }
+    </script>
 
 </body>
 </html>
